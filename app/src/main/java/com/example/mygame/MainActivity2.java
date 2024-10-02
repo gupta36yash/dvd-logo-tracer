@@ -51,6 +51,8 @@ public class MainActivity2 extends AppCompatActivity {
                 rotateAnimation.setRepeatCount(ObjectAnimator.INFINITE);  // Infinite repeat
                 rotateAnimation.setRepeatMode(ObjectAnimator.RESTART);  // Restart from 0 degrees
 
+                rotateAnimation.start();
+
                 // Runnable to move the ImageView diagonally
                 Runnable moveImage = new Runnable() {
                     @Override
