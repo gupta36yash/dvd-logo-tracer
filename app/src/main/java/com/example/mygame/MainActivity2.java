@@ -11,8 +11,8 @@ import android.view.MotionEvent;
 public class MainActivity2 extends AppCompatActivity {
 
     // Variables to store speed and direction
-    private float xVelocity = 15f;
-    private float yVelocity = 15f;
+    private float xVelocity;
+    private float yVelocity;
 
     private Handler handler = new Handler();
     private ImageView svgImageView;
@@ -41,6 +41,9 @@ public class MainActivity2 extends AppCompatActivity {
                 float screenHeight = rootView.getHeight();
                 float imageWidth= svgImageView.getWidth();
                 float imageHeight= svgImageView.getHeight();
+
+                xVelocity = 0.15f* screenWidth;
+                yVelocity = 0.15f * screenHeight;
 
 
                 // Runnable to move the ImageView diagonally
