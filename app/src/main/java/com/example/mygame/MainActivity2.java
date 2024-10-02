@@ -43,8 +43,8 @@ public class MainActivity2 extends AppCompatActivity {
                 float imageWidth= svgImageView.getWidth();
                 float imageHeight= svgImageView.getHeight();
 
-                xVelocity = 0.15f* screenWidth;
-                yVelocity = 0.15f * screenHeight;
+                xVelocity = 0.015f* screenWidth;
+                yVelocity = 0.015f * screenHeight;
 
                 ObjectAnimator rotateAnimation = ObjectAnimator.ofFloat(svgImageView, "rotation", 0f, 360f);
                 rotateAnimation.setDuration(2000);  // 2 seconds for a full rotation
