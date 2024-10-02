@@ -1,5 +1,6 @@
 package com.example.mygame;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -45,6 +46,10 @@ public class MainActivity2 extends AppCompatActivity {
                 xVelocity = 0.15f* screenWidth;
                 yVelocity = 0.15f * screenHeight;
 
+                ObjectAnimator rotateAnimation = ObjectAnimator.ofFloat(svgImageView, "rotation", 0f, 360f);
+                rotateAnimation.setDuration(2000);  // 2 seconds for a full rotation
+                rotateAnimation.setRepeatCount(ObjectAnimator.INFINITE);  // Infinite repeat
+                rotateAnimation.setRepeatMode(ObjectAnimator.RESTART);  // Restart from 0 degrees
 
                 // Runnable to move the ImageView diagonally
                 Runnable moveImage = new Runnable() {
